@@ -1,6 +1,6 @@
 # 🚵 Générateur de portrait de course - Les Géants 2025
 
-### 🔗 Live : [lesgeants.fr/portrait.html](https://lesgeants.fr/portrait.html)
+### 🔗 Live : [lesgeants.fr/portrait](https://lesgeants.fr/portrait)
 
 Une page web qui permet aux participants de l'événement d'ultra-cyclisme de créer leur portrait de course. Cela inclut leurs informations personnelles, le parcours choisi ainsi qu'une photo. Le portrait se compose de deux images au format 16:9 qui peuvent être partagées en story sur les réseaux sociaux.
 ![Capture d'écran du site](screenshot.png)
