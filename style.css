@@ -1,0 +1,595 @@
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@font-face {
+    font-family: 'ITC Avant Garde Gothic Std';
+    src: url('Fonts/ITCAvantGarde/itcavantgardestdbold-webfont.woff2') format('woff2'),
+         url('Fonts/ITCAvantGarde/itcavantgardestdbold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Varaibles */
+
+:root {
+    --accent: #ee7402;
+    --accent-second: #f08119;
+    --white-second: rgb(245, 245, 245);
+    --light-blue: #dbe2eb;
+    --light-cream: #ece5d8;
+}
+
+/* Reset defaul css style */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Set default style */
+
+h1 {
+    font-family: 'ITC Avant Garde Gothic Std', 'sans-serif';
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+h3, label {
+    font-family: 'ITC Avant Garde Gothic Std', 'sans-serif';
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+label {
+    text-transform: none;
+}
+
+p, a, li, input, select {
+    font-family: 'Blinker';
+    letter-spacing: 3px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+a {
+    color: black;
+}
+
+a.link {
+    text-decoration: underline;
+    transition-property: color, background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+a.link:hover {
+    color: white;
+    background-color: black;
+}
+
+section {
+    padding: 40px 0px;
+}
+
+/* General section style */
+
+.button {
+    display: inline-block;
+    color: white;
+    background-color: var(--accent);
+    font-family: 'Blinker';
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 20px 35px;
+    border-radius: 30px;
+    transition-property: background-color, color, padding;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+.button:hover {
+    background-color: var(--accent-second);
+    padding: 20px 40px;
+}
+
+.outline-button {
+    display: inline-block;
+    color: white;
+    font-family: 'Blinker';
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 20px 35px;
+    border-radius: 50px;
+    border: solid 1px white;
+    transition-property: background-color, color, padding;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+.outline-button:hover {
+    color: black !important;
+    background-color: white;
+    padding: 20px 40px;
+}
+
+.outline-info {
+    display: inline-block;
+    color: white;
+    font-family: 'Anton';
+    letter-spacing: 3px;
+    font-size: 15px;
+    border-radius: 30px;
+    border: solid 2px white;
+    padding: 8px 15px;
+    margin: 0px 5px;
+}
+
+.column-container {
+    width: 100%;
+    padding: 40px 0px;
+}
+
+.column-container .content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.element {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    margin: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    transition: transform .3s ease;
+}
+.info-tab .element:hover, .tarifs .element:hover {
+    transform: translateY(-10px);
+}
+
+.element img {
+    display: block;
+    margin: auto;
+}
+
+/* Specific styles */
+
+.body {
+    position: relative;
+}
+
+.language {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 5;
+    user-select: none;
+}
+
+.language-button {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: solid 1px var(--light-blue);
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+.language-button:hover {
+    background-color: var(--white-second);
+}
+
+.language-button img, .menu-choice img {
+    display: inline-block;
+    width: 20px;
+}
+
+.language-button p, .menu-choice p {
+    color: black;
+    display: inline-block;
+}
+
+#menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    border: solid 1px var(--light-blue);
+}
+#menu.open {
+    display: block;
+}
+
+.menu-choice {
+    background-color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+.menu-choice:hover {
+    background-color: var(--white-second);
+}
+
+.banner {
+    padding-top: 0px;
+    position: relative;
+}
+
+.image-banner img {
+    width: 100%;
+    height: auto;
+}
+
+.banner .overlay-content {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner .overlay-content h1 {
+    font-size: 60px;
+    color: #202020;
+    margin-bottom: 20px;
+}
+
+.banner .overlay-content h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.banner .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    color: black;
+}
+.banner .button:hover {
+    color: red;
+}
+
+.banner .button .live-dot {
+    height: 7px;
+    width: 7px;
+    border-radius: 7px;
+    background-color: red;
+    margin-top: 2px;
+}
+
+.countdown-container {
+    display: inline-flex;
+    margin-bottom: 30px;
+}
+
+.countdown {
+    color: white;
+    display: flex;
+    text-align: center;
+}
+
+.countdown span {
+    font-family: 'Anton';
+    font-size: 40px;
+    padding: 0px 30px
+}
+
+.countdown .sep span {
+    font-size: 30px;
+    padding: 0px;
+}
+
+.countdown p {
+    text-transform: uppercase;
+}
+
+.countdown > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.quesaco {
+    padding: 60px 0px;
+}
+
+.text-section {
+    text-align: center;
+    padding: 20px;
+    max-width: 1000px;
+    display: block;
+    margin: auto;
+}
+
+.text-section p {
+    text-align: justify;
+    padding: 20px 50px;
+}
+
+.text-section iframe {
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.general-info .column-container {
+    background-color: var(--accent);
+    color: white;
+}
+
+.general-info .element img {
+    width: 60px;
+    height: auto;
+}
+
+.maps .element img {
+    width: 100%;
+    height: auto;
+}
+
+.info-tab {
+    max-width: 1000px;
+    padding: 20px;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.info-tab h1 {
+    color: var(--accent);
+}
+
+.info-tab .element {
+    background-color: var(--light-cream);
+    margin: 0px 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border: solid 1px var(--accent);
+}
+
+.buy {
+    padding-bottom: 0px;
+}
+
+.tarifs {
+    text-align: center;
+    background-color: var(--light-cream);
+    padding: 100px 0px;
+}
+
+.tarifs h1 {
+    color: #ee7402;
+}
+
+.tarifs .element {
+    color: white;
+    margin: 0px 20px;
+    margin-bottom: 20px;
+    padding: 40px 0px;
+    text-align: center;
+}
+
+.tarifs .km300 {
+    background-color: var(--accent);
+}
+.tarifs .km400 {
+    background-color: #694d2e;
+}
+.tarifs .km700 {
+    background-color: #ce4919;
+}
+
+.tarifs .buttons-container {
+    display: block;
+    margin: 20px 0px;
+}
+
+.tarifs .button {
+    margin-top: 20px;
+}
+
+.tarifs .info-block {
+    margin-top: 50px;
+}
+
+.more-info h1 {
+    text-align: center;
+    color: var(--accent);
+    margin-top: 40px;
+}
+
+.faq {
+    max-width: 1000px;
+    margin: 40px auto;
+    margin-bottom: 100px;
+}
+
+.question-title {
+    display: flex;
+    text-transform: uppercase;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 1px;
+    background-color: var(--light-cream);
+    cursor: pointer;
+}
+
+.question-title .sign {
+    font-size: 20px;
+    user-select: none;
+}
+
+.question-content {
+    padding: 0px 20px;
+    overflow: hidden;
+    min-height: 0px;
+    max-height: 0px;
+    transition-property: max-height, padding;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
+}
+.question-content.open {
+    max-height: 2000px;
+    padding: 40px 20px;
+    display: block;
+}
+
+.question-content h3:not(:first-child) {
+    margin-top: 30px;
+}
+
+.question-content ul {
+    margin-left: 10px;
+}
+
+.question-content li {
+    list-style: inside;
+    margin-top: 5px;
+}
+
+.question-content p:not(:first-child) {
+    margin-top: 30px;
+}
+
+.question-content a.link {
+    display: inline-block;
+}
+
+.question-content div:not(:first-child) {
+    margin-top: 20px;
+}
+
+.question-content .inline p, .question-content .inline a {
+    display: inline;
+}
+
+.footer {
+    color: white;
+    background-color: var(--accent);
+    text-align: center;
+}
+
+.footer p, .footer a {
+    display: inline-block;
+}
+
+.footer .outline-button {
+    font-size: 15px;
+    padding: 8px 15px;
+    margin-left: 10px;
+}
+
+.included h1 {
+    margin-top: 60px;
+    color: var(--accent);
+    text-align: center;
+}
+
+.tableau {
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
+}
+
+.grid-container {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.grid-container .item {
+    padding: 20px;
+    background: var(--light-cream);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: background-color .3s ease;
+}
+.grid-container .item:hover {
+    background-color: #dbd4c7;
+}
+
+.grid-container .item svg {
+    width: 50px;
+}
+
+.diaporama h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.diaporama .container {
+    text-align: center;
+}
+
+
+
+/* Responsive */
+
+@media only screen and (max-width: 1155px) {
+    .banner .overlay-content h1 {
+      font-size: 40px;
+    }
+
+    .grid-container {
+        max-width: 800px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 835px) {
+    .language {
+        top: 10px;
+    }
+    
+    .banner .overlay-content h1 {
+      display: none;
+    }
+
+    .faq {
+        margin-bottom: 40px;
+    }
+
+    .image-banner img {
+        content: url('Resources/Slider_Mobile.jpg');
+    }
+
+    .countdown span {
+        padding: 0px 12px;
+    }
+
+    .countdown p {
+        font-size: 12px;
+    }
+
+    .diaporama iframe {
+        width: 100% !important;
+    }
+}
