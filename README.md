@@ -1,4 +1,4 @@
-# ⚽ Générateur de portrait de course - Les Géants 2025
+# 🚵 Générateur de portrait de course - Les Géants 2025
 
 ### 🔗 Live : [lesgeants.fr/portrait.html](https://lesgeants.fr/portrait.html)
 
